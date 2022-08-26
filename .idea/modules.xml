@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BookMarket/BookMarket.iml" filepath="$PROJECT_DIR$/BookMarket/BookMarket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSP.iml" filepath="$PROJECT_DIR$/JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSPBook/JSPBook.iml" filepath="$PROJECT_DIR$/JSPBook/JSPBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebMarket/WebMarket.iml" filepath="$PROJECT_DIR$/WebMarket/WebMarket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_study_01/web_study_01.iml" filepath="$PROJECT_DIR$/web_study_01/web_study_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_study_02/web_study_02.iml" filepath="$PROJECT_DIR$/web_study_02/web_study_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_study_03/web_study_03.iml" filepath="$PROJECT_DIR$/web_study_03/web_study_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_study_04/web_study_04.iml" filepath="$PROJECT_DIR$/web_study_04/web_study_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web_study_05/web_study_05.iml" filepath="$PROJECT_DIR$/web_study_05/web_study_05.iml" />
+    </modules>
+  </component>
+</project>
