@@ -6,6 +6,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel = "stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>상품 상세 정보</title>
 </head>
 <body>
@@ -19,7 +21,8 @@
 </div>
 <%
     String id = request.getParameter("id");
-    Book book = productDAO.getBookByID(id);
+    BookRepository dao = BookRepository.getInstance();
+    Book book = dao.getBookByID(id);
 %>
 
 

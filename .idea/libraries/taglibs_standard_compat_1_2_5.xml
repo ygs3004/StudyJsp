@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="taglibs-standard-compat-1.2.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.65/lib/taglibs-standard-compat-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.65/lib/taglibs-standard-impl-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.65/lib/taglibs-standard-jstlel-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.65/lib/taglibs-standard-spec-1.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -20,5 +21,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javax.servlet.api" level="project" />
+    <orderEntry type="library" name="taglibs-standard-compat-1.2.5" level="project" />
+    <orderEntry type="library" name="jsp-api" level="project" />
   </component>
 </module>
