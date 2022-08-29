@@ -9,7 +9,7 @@
 <%
     request.setCharacterEncoding("UTF-8");
 %>
-<jsp:useBean id="member" class="com.saeyan.javabeans.javabeans.MemberBean"/>
+<jsp:useBean id="member" class="com.saeyan.javabeans.MemberBean"/>
 <jsp:setProperty name="member" property="*"/>
 
 <h1>입련된 회원 정보</h1>

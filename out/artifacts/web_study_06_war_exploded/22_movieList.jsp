@@ -25,5 +25,21 @@
     </tr>
     </c:forEach>
 </table>
+o0
+<table border="1" style="width: 100%;text-align: center;">
+    <tr>
+        <th>index</th>
+        <th>count</th>
+        <th>cnt</th>
+    </tr>
+
+    <c:forEach var="cnt" begin="1" end="10" varStatus="status" step="2">
+    <tr>
+        <td>${status.index}</td>
+        <td>${status.count}</td>
+        <td>${cnt}</td>
+    </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

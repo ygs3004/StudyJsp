@@ -4,13 +4,13 @@
 <%@ page import = "dao.ProductRepository"%>
 <html>
 <head>
-<link rel = "stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel = "stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">	<meta charset="UTF-8">
     <meta charset="UTF-8">
     <title>상품 상세 정보</title>
 </head>
 <body>
-    <jsp:include page="menu.jsp"></jsp:include>
+    <jsp:include page="menu.jsp"/>
     <div class="jumbotron">
         <div class="container">
             <h1 class="display-3">상품 정보</h1>
@@ -23,6 +23,10 @@
     %>
     <div class="container">
         <div class="row">
+            <div class="col-md-5">
+                <img src="./resources/images/upload/<%=product.getFilename()%>"
+                     style="width:100%">
+            </div>
             <div class="col-md-6">
                 <h3><%=product.getPname()%></h3>
                 <p><%=product.getDescription()%>
@@ -41,6 +45,6 @@
 
 
 
-    <jsp:include page="footer.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"/>
 </body>
 </html>
