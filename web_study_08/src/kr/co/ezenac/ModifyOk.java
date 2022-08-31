@@ -58,5 +58,27 @@ public class ModifyOk extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         httpSession=request.getSession();
+
+        name=request.getParameter("name");
+        id=request.getParameter("id");
+        pw=request.getParameter("pw");
+        phone1=request.getParameter("phone1");
+        phone2=request.getParameter("phone2");
+        phone3=request.getParameter("phone3");
+        gender=request.getParameter("gender");
+
+        if(pwConfirm()){
+
+        }
     }
+
+    private boolean pwConfirm(){
+        boolean rs = false;
+        String sessionPw = (String)httpSession.getAttribute("pw");
+
+        if(sessionPw.equals(pw)){
+            rs=true;
+        }
+        return rs;
+     }
 }
