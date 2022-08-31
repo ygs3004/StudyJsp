@@ -13,6 +13,7 @@ public class Book {
 	private long totalPages;	//페이지 수
 	private String releaseDate;	//출판일(월/년)
 	private String condition;	//신규 도서 or 중고 도서 or E-Book
+	private String fileName; // 이미지 파일 이름
 
 	public Book() {
 
@@ -112,4 +113,7 @@ public class Book {
 		this.condition = condition;
 	}
 
+	public String getFileName() {return fileName;}
+
+	public void setFileName(String fileName) {this.fileName = fileName;}
 }

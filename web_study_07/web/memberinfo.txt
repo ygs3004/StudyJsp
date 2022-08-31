@@ -1,0 +1,16 @@
+CREATE TABLE memberInfo(
+    id VARCHAR2(20),
+    pass1 VARCHAR2(20),
+    email VARCHAR2(50),
+    tel VARCHAR2(60),
+    hobby VARCHAR2(60),
+    job VARCHAR2(15),
+    age VARCHAR2(10),
+    info VARCHAR2(500)
+);
+
+COMMIT;
+
+INSERT INTO memberInfo VALUES('ezen01', '1234', 'ezen01@ezen.com', '010-1111-1111', '운동1', '개발자1', '28', 'information1');
+INSERT INTO memberInfo VALUES('ezen02', '5678', 'ezen02@ezen.com', '010-2222-2222', '운동2', '개발자2', '29', 'information2');
+INSERT INTO memberInfo VALUES('ezen03', '9012', 'ezen03@ezen.com', '010-3333-3333', '운동3', '개발자3', '30', 'information3');

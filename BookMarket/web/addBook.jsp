@@ -2,7 +2,8 @@
          pageEncoding="UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel = "stylesheet"
+          href="./resources/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>$Title$</title>
 </head>
@@ -15,7 +16,8 @@
     </div>
 
     <div class="container">
-        <form action="processAddBook.jsp" name="newBook" class="form-horizontal" method="post">
+        <form action="processAddBook.jsp" name="newBook" class="form-horizontal" method="post"
+        enctype="multipart/form-data">
 
         <div class="form-group row">
             <label class="col-sm-2">도서 코드</label>
@@ -94,6 +96,13 @@
                     <input type="radio" name="condition" value="New"> 신규 제품
                     <input type="radio" name="condition" value="Old"> 중고 제품
                     <input type="radio" name="condition" value="Refurbished"> 재생 제품
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2">이미지</label>
+                <div class="col-sm-5">
+                    <input type="file" name="bookImage" class="form-control">
                 </div>
             </div>
 

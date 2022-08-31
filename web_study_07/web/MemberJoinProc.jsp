@@ -1,3 +1,4 @@
+<%@ page import="model.MemberDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <html>
@@ -15,7 +16,7 @@
     for(int i=0; i<hobby.length; i++){
         texthobby += hobby[i]+" ";
     }
-//    texthobby=String.join("",hobby);
+//    texthobby=String.join(" ",hobby);
 
 %>
 
@@ -25,12 +26,16 @@
     <jsp:setProperty name="mbean" property="*"/>
 </jsp:useBean>
 
+
 <%
     mbean.setHobby(texthobby);
+    MemberDAO mdao = new MemberDAO();
+    mdao.insertMember(mbean);
+
+    response.sendRedirect("MemberList.jsp");
 %>
 
 OK MemberJoinProc!!
-<jsp:getProperty name="mbean" property="hobby"/>
 
 </body>
 </html>

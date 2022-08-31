@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel = "stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	href="./resources/css/bootstrap.min.css">
 <style type="text/css">
 	h4{
 		margin-top : 20px;
@@ -39,8 +39,14 @@
 	%>
 
 			<div class="container">
+
 				<div class="row" >
-					<div class="col-10">
+
+					<div class="col-2">
+						<img src="./resources/images/upload/<%=book.getFileName()%>" style="width:160px; height:200px">
+					</div>
+
+					<div class="col-8">
 						<h3><b><%=book.getName() %></b></h3>
 						<p><h4><%=book.getDescription() %></h4>
 						<p><h5><%=book.getAuthor()%>원 | <%=book.getPublisher()%>원 | <%=book.getUnitPrice()%>원</h5>
@@ -51,6 +57,7 @@
 							<a href="book.jsp?id=<%=book.getBookdId()%>"
 							   class="btn btn-secondary" role="button">상세 정보 &raquo;</a>
 					</div>
+
 				</div>
 				<hr>
 			</div>

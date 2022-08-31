@@ -19,6 +19,7 @@ public class BookRepository {
 		helloCoding.setTotalPages(100);
 		helloCoding.setReleaseDate("최근");
 		helloCoding.setCondition("신규");
+		helloCoding.setFileName("HelloCoding.png");
 
 
 		Book itMobile1 = new Book("IT모바일", "쉽게 배우는 자바 프로그래밍", 27000);
@@ -30,6 +31,7 @@ public class BookRepository {
 		itMobile1.setTotalPages(100);
 		itMobile1.setReleaseDate("최근");
 		itMobile1.setCondition("신규");
+		itMobile1.setFileName("java.png");
 
 		Book itMobile2 = new Book("IT 모바일", "스프링4 입문", 27000);
 		itMobile2.setAuthor("하세가와 유이치, 오오노 와타루, 토키 코헤이(권은철, 전민수)");
@@ -40,6 +42,7 @@ public class BookRepository {
 		itMobile2.setTotalPages(100);
 		itMobile2.setReleaseDate("최근");
 		itMobile2.setCondition("신규");
+		itMobile2.setFileName("Spring.png");
 
 		listOfBook.add(helloCoding);
 		listOfBook.add(itMobile1);

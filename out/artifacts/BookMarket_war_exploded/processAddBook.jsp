@@ -2,6 +2,9 @@
          pageEncoding="UTF-8" %>
 <%@ page import="dao.BookRepository"%>
 <%@ page import="dto.Book"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page import="java.util.Enumeration" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -11,17 +14,24 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-   String bookId=request.getParameter("bookId");
-   String name=request.getParameter("name");
-   String unitPrice=request.getParameter("unitPrice");
-   String author=request.getParameter("author");
-   String description=request.getParameter("description");
-   String publisher=request.getParameter("publisher");
-   String category=request.getParameter("category");
-   String unitsInStock=request.getParameter("unitsInStock");
-   String totalPages=request.getParameter("totalPages");
-   String releaseData=request.getParameter("releaseData");
-   String condition=request.getParameter("condition");
+    String realFolder = request.getServletContext().getRealPath("resources/images/upload");
+    int maxSize = 5 * 1024 * 1024;
+    String encType = "UTF-8";
+
+    MultipartRequest multi = new MultipartRequest(request, realFolder,
+            maxSize, encType, new DefaultFileRenamePolicy());
+
+   String bookId=multi.getParameter("bookId");
+   String name=multi.getParameter("name");
+   String unitPrice=multi.getParameter("unitPrice");
+   String author=multi.getParameter("author");
+   String description=multi.getParameter("description");
+   String publisher=multi.getParameter("publisher");
+   String category=multi.getParameter("category");
+   String unitsInStock=multi.getParameter("unitsInStock");
+   String totalPages=multi.getParameter("totalPages");
+   String releaseData=multi.getParameter("releaseData");
+   String condition=multi.getParameter("condition");
 
     int price;
 
@@ -39,6 +49,10 @@
         stock = Long.parseLong(unitsInStock);
     }
 
+    Enumeration files = multi.getFileNames();
+    String fname = (String) files.nextElement();
+    String fileName = multi.getFilesystemName(fname);
+
     BookRepository dao = BookRepository.getInstance();
 
     Book newBook = new Book();
@@ -53,6 +67,7 @@
     newBook.setTotalPages(Integer.parseInt(totalPages));
     newBook.setReleaseDate(releaseData);
     newBook.setCondition(condition);
+    newBook.setFileName(fileName);
 
     dao.addBook(newBook);
 
