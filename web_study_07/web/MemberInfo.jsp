@@ -16,7 +16,6 @@
 <div align="center">
   <h2>개인 회원 보기</h2>
     <table width="400" border="1">
-        <%=id%>
         <tr height="50">
             <td align="center" width="150">아이디</td>
             <td width="250"><%=mbean.getId()%></td>

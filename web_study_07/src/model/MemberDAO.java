@@ -30,7 +30,7 @@ public class MemberDAO {
 
         try{
             getcon();
-            String sql = "INSERT INTO memberINFO VALUES(?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO memberInfo VALUES(?,?,?,?,?,?,?,?)";
             pstmt=conn.prepareStatement(sql);
 
             pstmt.setString(1,mbean.getId());
@@ -43,6 +43,9 @@ public class MemberDAO {
             pstmt.setString(8,mbean.getInfo());
 
             pstmt.executeUpdate(); // insert, update, delete
+
+            conn.close();
+            pstmt.close();
         }catch (Exception e){
             e.printStackTrace();
         }

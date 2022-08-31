@@ -17,7 +17,6 @@
 <%
     String id = request.getParameter("id");
     MemberDAO mdao = new MemberDAO();
-
     String pass = mdao.getPass1(id);
     if(mbean.getPass1().equals(pass)){
         mdao.deleteMember(id);
