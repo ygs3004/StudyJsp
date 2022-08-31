@@ -54,6 +54,20 @@
           </select>-
           <input type="text" name="phone2" size="5" value="<%=phone2%>">-
           <input type="text" name="phone3" size="5" value="<%=phone3%>">
+        <%
+            if(gender.equals("man")){
+        %>
+            성별구분 : <input type="radio" name="gender" value="man" checked="checked">남&nbsp;
+                      <input type="radio" name="gender" value="woman">여<br>
+        <%
+            }else{
+        %>
+            성별구분 : <input type="radio" name="gender" value="man">남&nbsp;
+            <input type="radio" name="gender" value="woman"  checked="checked">여<br>
+        <%
+            }
+        %>
+        <input type="submit" value="정보수정"><input type="reset" value="취소">
 </form>
 </body>
 </html>
