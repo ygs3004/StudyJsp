@@ -1,0 +1,17 @@
+// DROP TABLE member;
+
+CREATE TABLE member(
+    name VARCHAR2(20),
+    id VARCHAR2(20),
+    pw VARCHAR2(20),
+    phone1 VARCHAR2(10),
+    phone2 VARCHAR2(10),
+    phone3 VARCHAR2(10),
+    gender VARCHAR2(10)
+);
+
+INSERT INTO member VALUES('홍길동','hong01','1234','010-','1111','-1111','man');
+
+COMMIT;
+
+SELECT * FROM member;

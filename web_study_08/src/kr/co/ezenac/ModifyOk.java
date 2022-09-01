@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.ResultSet;
+import java.sql.DriverManager;
 import java.sql.Statement;
 
 /**
@@ -20,7 +20,6 @@ public class ModifyOk extends HttpServlet {
 
     private Connection connection;
     private Statement stmt;
-    private ResultSet resultSet;
 
     private String name, id, pw, phone1, phone2, phone3, gender;
     HttpSession httpSession;
@@ -40,7 +39,6 @@ public class ModifyOk extends HttpServlet {
             throws ServletException, IOException {
         // TODO Auto-generated method stub
         // response.getWriter().append("Served at: ").append(request.getContextPath());
-        actionDo(request, response);
     }
 
     /**
@@ -60,7 +58,7 @@ public class ModifyOk extends HttpServlet {
         httpSession=request.getSession();
 
         name=request.getParameter("name");
-        id=request.getParameter("id");
+        id=(String)httpSession.getAttribute("id");
         pw=request.getParameter("pw");
         phone1=request.getParameter("phone1");
         phone2=request.getParameter("phone2");
@@ -68,7 +66,45 @@ public class ModifyOk extends HttpServlet {
         gender=request.getParameter("gender");
 
         if(pwConfirm()){
+            System.out.println("Ok");
+            //name phone gender
+            String query="UPDATE member SET name='"+name+"', phone1='"+phone1+"', phone2='"+phone2+"', phone3='"+phone3+"', gender='"+gender+"' WHERE id='"+id+"'";
 
+            try{
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+                connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
+                stmt = connection.createStatement();
+                int i = stmt.executeUpdate(query);
+
+                if(i==1){
+                    System.out.println("update success");
+                    httpSession.setAttribute("name",name);
+                    response.sendRedirect("modifyResult.jsp");
+                }else{
+                    System.out.println("update fail");
+                    response.sendRedirect("modify.jsp");
+                }
+
+                connection.close();
+                stmt.close();
+
+            }catch (Exception e){
+                e.printStackTrace();
+
+            }finally {
+                try{
+                    if(stmt != null)
+                        stmt.close();
+                    if(connection != null)
+                        connection.close();
+                }catch(Exception e2){
+                    e2.printStackTrace();
+                }
+            }
+
+
+        }else{
+            System.out.println("NG");
         }
     }
 

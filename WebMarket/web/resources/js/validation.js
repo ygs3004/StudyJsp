@@ -30,7 +30,7 @@ function CheckAddProduct(){
         unitPrice.select();
         unitPrice.focus();
         return false;
-    } else if(!check(/^\d+(?[.]?[\d]?[\d]?$/, unitPrice,
+    } else if(!check(/^\d+(?:[.]?[\d]?[\d])?$/, unitPrice,
         "[가격]\n소수점 둘째 자리까지만 입력하세요"))
         return false;
 
@@ -53,5 +53,5 @@ function CheckAddProduct(){
         return false;
     }
 
-    document.newProduct.submit();
+    document.submit();
 }

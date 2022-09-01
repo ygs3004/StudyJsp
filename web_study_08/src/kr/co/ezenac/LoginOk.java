@@ -52,6 +52,7 @@ public class LoginOk extends HttpServlet {
             throws ServletException, IOException {
         // TODO Auto-generated method stub
         // doGet(request, response);
+        actionDo(request, response);
     }
 
     private void actionDo(HttpServletRequest request, HttpServletResponse response)
@@ -62,7 +63,7 @@ public class LoginOk extends HttpServlet {
         String query="SELECT*FROM member WHERE id='"+id+"' AND pw='"+pw+"'";
 
         try{
-            Class.forName("oracle:jdbc:driver:OracleDriver");
+            Class.forName("oracle.jdbc.driver.OracleDriver");
             connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
             stmt = connection.createStatement();
             resultSet = stmt.executeQuery(query);

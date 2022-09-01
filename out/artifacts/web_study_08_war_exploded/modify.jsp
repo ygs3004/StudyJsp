@@ -25,7 +25,7 @@
         String query="SELECT * FROM member WHERE id='"+id+"'";
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe");
+        connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","scott","tiger");
         statement = connection.createStatement();
         resultSet = statement.executeQuery(query);
 
@@ -51,9 +51,9 @@
             <option value="018">018</option>
             <option value="019">019</option>
             <option value="011">011</option>
-          </select>-
-          <input type="text" name="phone2" size="5" value="<%=phone2%>">-
-          <input type="text" name="phone3" size="5" value="<%=phone3%>">
+          </select> -
+          <input type="text" name="phone2" size="5" value="<%=phone2%>"> -
+          <input type="text" name="phone3" size="5" value="<%=phone3%>"><br>
         <%
             if(gender.equals("man")){
         %>
