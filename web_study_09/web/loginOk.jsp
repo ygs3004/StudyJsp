@@ -14,7 +14,7 @@
     String pw = request.getParameter("pw");
 
     MemberDao dao = MemberDao.getInstance();
-    int num = dao.userCheck("id","pw");
+    int num = dao.userCheck(id,pw);
 
     if(num == -1){ // MemberDao.MEMBER_LOGIN_IS_NOT
 %>
@@ -31,8 +31,7 @@
     </script>
 <%
     }else if(num ==1){ //MemberDao.MEMBER_LOGIN_SUCCESS
-        MemberDto dto = dao.getMember("id");
-
+        MemberDto dto = dao.getMember(id);
         if(dto ==null){
 %>
         <script type="text/javascript">

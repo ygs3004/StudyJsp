@@ -11,10 +11,14 @@
     request.setCharacterEncoding("UTF-8");
 %>
 <jsp:useBean id="dto" class="com.javalec.ex.MemberDto"/>
-<jsp:setProperty name="*" property="dto"/>
 <%
     String id = (String)session.getAttribute("id");
+    String name = (String)session.getAttribute("name");
+%>
+<jsp:setProperty name="dto" property="*"/>
+<%
     dto.setId(id);
+    dto.setName(name);
 
     MemberDao dao = MemberDao.getInstance();
     int ri = dao.updateMember(dto);

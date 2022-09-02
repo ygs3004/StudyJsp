@@ -31,3 +31,31 @@ DBCP(DataBase Connection Pool)
 %>
 </body>
 </html>
+<%--
+
+https://zer0lab.tistory.com/m/22
+
+<Context>
+
+    <Resource
+
+            name="데이터베이스 이름"
+            auth="Container"
+            driverClassName="oracle.jdbc.driver.OracleDriver"
+            type="javax.sql.DataSource"
+            url="jdbc:oracle:thin:@ip주소:포트번호:전역 데이터베이스 이름"
+            username="데이터베이스 아이디"
+            password="데이터베이스 비밀번호"
+            maxActive="20"
+            maxIdle="10"
+            maxWait="5000"  />
+
+</Context>
+
+<web.xml>
+<resource-ref>
+    <description>Connection</description>
+    <res-ref-name>자신의 데이터베이스 이름</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+</resource-ref>--%>

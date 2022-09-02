@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="ojdbc6">
+  <library name="tomcat-dbcp">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../LibraryFile/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Library/tomcat-dbcp.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -105,7 +105,6 @@ public class MemberDao {
     public int userCheck(String id, String pw){
         int ri=0;
         String abPw;
-
         Connection connection = null;
         PreparedStatement pstmt = null;
         ResultSet set = null;
@@ -133,9 +132,12 @@ public class MemberDao {
             e.printStackTrace();
         }finally {
             try{
-                set.close();
-                pstmt.close();
-                connection.close();
+                if(set != null)
+                    set.close();
+                if(pstmt != null)
+                    pstmt.close();
+                if(connection != null)
+                    connection.close();
             }catch (Exception e2){
                 e2.printStackTrace();
             }
@@ -150,7 +152,7 @@ public class MemberDao {
         ResultSet set = null;
         MemberDto dto = null;
 
-        String query = "SELECT pw FROM members WHERE id=?";
+        String query = "SELECT * FROM members WHERE id=?";
 
         try{
             connection = getConnection();
@@ -160,9 +162,10 @@ public class MemberDao {
 
             if (set.next()) {
                 dto = new MemberDto();
+                dto.setId(set.getString("id"));
                 dto.setPw(set.getString("pw"));
                 dto.setName(set.getString("name"));
-                dto.setEmail(set.getString("pw"));
+                dto.setEmail(set.getString("email"));
                 dto.setrDate(set.getTimestamp("rDate"));
                 dto.setAddress(set.getString("address"));
             }
@@ -191,7 +194,7 @@ public class MemberDao {
         PreparedStatement pstmt = null;
 
 
-        String query = "UPDATE members SET pw=?, email=?, address=? where id=?";
+        String query = "UPDATE members SET pw=?, email=?, address=? WHERE id=?";
 
         try{
             connection = getConnection();
