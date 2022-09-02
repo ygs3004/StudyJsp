@@ -18,7 +18,7 @@ function CheckAddProduct(){
     }
 
     //상품 가격 체크
-    if(unitPrice.value.length == 0 || isNaN(unitPrice.value)){
+    if(unitPrice.value.length === 0 || isNaN(unitPrice.value)){
         alert("[가격]\n숫자만 입력하세요");
         unitPrice.select();
         unitPrice.focus();
@@ -53,5 +53,5 @@ function CheckAddProduct(){
         return false;
     }
 
-    document.submit();
+    document.newProduct.submit();
 }

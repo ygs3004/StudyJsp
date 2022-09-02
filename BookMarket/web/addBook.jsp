@@ -23,7 +23,7 @@
         <div class="form-group row">
             <label class="col-sm-2">도서 코드</label>
             <div class="col-sm-3">
-                <input type="text"id="bookId" name="bookId" class="form-control">
+                <input type="text" id="bookId" name="bookId" class="form-control">
             </div>
         </div>
 
@@ -112,7 +112,7 @@
                     <input type="button" class="btn btn-primary" value="등록" onclick="CheckAddBook()">
                 </div>
             </div>
-
+        </form>
     </div>
     <jsp:include page="footer.jsp"/>
 </body>

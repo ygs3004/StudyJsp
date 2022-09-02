@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>$Title$</title>
+    <script type=text/javascript src="members.js"></script>
 </head>
 <body>
 <form action="joinOk.jsp" method="post" name="reg_frm">

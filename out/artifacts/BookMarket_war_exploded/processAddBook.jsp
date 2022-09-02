@@ -21,17 +21,17 @@
     MultipartRequest multi = new MultipartRequest(request, realFolder,
             maxSize, encType, new DefaultFileRenamePolicy());
 
-   String bookId=multi.getParameter("bookId");
-   String name=multi.getParameter("name");
-   String unitPrice=multi.getParameter("unitPrice");
-   String author=multi.getParameter("author");
-   String description=multi.getParameter("description");
-   String publisher=multi.getParameter("publisher");
-   String category=multi.getParameter("category");
-   String unitsInStock=multi.getParameter("unitsInStock");
-   String totalPages=multi.getParameter("totalPages");
-   String releaseData=multi.getParameter("releaseData");
-   String condition=multi.getParameter("condition");
+    String bookId=multi.getParameter("bookId");
+    String name=multi.getParameter("name");
+    String unitPrice=multi.getParameter("unitPrice");
+    String author=multi.getParameter("author");
+    String description=multi.getParameter("description");
+    String publisher=multi.getParameter("publisher");
+    String category=multi.getParameter("category");
+    String unitsInStock=multi.getParameter("unitsInStock");
+    String totalPages=multi.getParameter("totalPages");
+    String releaseData=multi.getParameter("releaseData");
+    String condition=multi.getParameter("condition");
 
     int price;
 

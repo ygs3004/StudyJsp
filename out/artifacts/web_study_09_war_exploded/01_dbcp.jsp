@@ -26,7 +26,7 @@ DBCP(DataBase Connection Pool)
     } catch (Exception e) {
         e.printStackTrace();
     }
-
+    out.println(connection);
     out.println("DBCP 연동 성공");
 %>
 </body>

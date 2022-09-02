@@ -1,0 +1,12 @@
+CREATE TABLE members(
+    id VARCHAR2(20),
+    pw VARCHAR2(20),
+    name VARCHAR2(20),
+    email VARCHAR2(20),
+    rDate date,
+    address VARCHAR2(20)
+);
+
+COMMIT;
+
+SELECT*FROM members;

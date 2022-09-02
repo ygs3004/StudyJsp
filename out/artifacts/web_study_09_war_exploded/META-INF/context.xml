@@ -4,23 +4,22 @@
               auth="Container"
               type="javax.sql.DataSource"
               driverClassName="oracle.jdbc.OracleDriver"
-              url="jdbc:oracle:thin:@localhost:1521:xe"
+              url="jdbc:oracle:thin:@localhost:1521:XE"
               username="scott"
               password="tiger"
               maxActive="50"
               maxIdle="10"
               maxWaitMillis="1000"
     />
-    <!--
-        maxActive(maxTotal) : 동시에 사용할 수 있는 최대 커넥션 개수 (기본값 :8)
-        maxWait(maxWaitMillis) : 할당받을 Connection 객체가 없을 때 쓰레드를 블록시킬 시간(1/1000초 단위)
-                                    -1의 경우 무한
-        maxIdle : 반납된 Connection 객체를 유지할 수 있는 최대값(기본값 : 80)
-
-
-    -->
 </Context>
+        <!--
+            maxActive(maxTotal) : 동시에 사용할 수 있는 최대 커넥션 개수 (기본값 :8)
+            maxWait(maxWaitMillis) : 할당받을 Connection 객체가 없을 때 쓰레드를 블록시킬 시간(1/1000초 단위)
+                                        -1의 경우 무한
+            maxIdle : 반납된 Connection 객체를 유지할 수 있는 최대값(기본값 : 80)
 
+
+        -->
 
 <!--이클립스 xml <Resource/> 넣기 전-->
 <!--
