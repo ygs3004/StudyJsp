@@ -10,6 +10,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -23,7 +24,5 @@
     <orderEntry type="library" exported="" name="jsp-api" level="project" />
     <orderEntry type="library" exported="" name="javax.servlet.api" level="project" />
     <orderEntry type="library" exported="" name="taglibs-standard-compat-1.2.5" level="project" />
-    <orderEntry type="library" exported="" name="ojdbc61" level="project" />
-    <orderEntry type="library" exported="" name="tomcat-dbcp" level="project" />
   </component>
 </module>

@@ -1,0 +1,10 @@
+CREATE TABLE employees(
+id VARCHAR2(10) not null,
+pass VARCHAR2(10) not null,
+name VARCHAR2(24),
+lev CHAR(1) DEFAULT 'A', --A:운영자, B:일반회원
+enter DATE DEFAULT SYSDATE,
+gender CHAR(2) DEFAULT '1',
+phone VARCHAR2(30),
+primary key(id)
+);
