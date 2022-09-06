@@ -47,7 +47,7 @@
             <td>
                 <select name="gender">
                     <c:choose>
-                        <c:when test="${gender == 1}">
+                        <c:when test="${loginUser.gender == 1}">
                             <option value="1" selected="selected">남자</option>
                             <option value="2">여자</option>
                         </c:when>

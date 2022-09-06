@@ -2,6 +2,7 @@
          pageEncoding="UTF-8" %>
 <%@ page import = "dto.Product"%>
 <%@ page import = "dao.ProductRepository"%>
+<%@ page errorPage="exceptionNoProductId.jsp"%>
 <html>
 <head>
     <link rel = "stylesheet"

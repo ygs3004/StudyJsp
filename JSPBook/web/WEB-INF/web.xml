@@ -25,4 +25,22 @@
             <form-error-page>/Exercise/ch10/login_failed.jsp</form-error-page>
         </form-login-config>
     </login-config>
+
+<!--
+    <error-page> ex / ch11 / exception
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/Exercise/ch11/exception_error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/ch11/exceptionType_error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/ch11/errorCode_error.jsp</location>
+    </error-page>
+-->
+
 </web-app>

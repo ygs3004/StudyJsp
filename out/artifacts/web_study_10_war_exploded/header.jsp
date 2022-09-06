@@ -36,7 +36,7 @@
 
                 <c:choose>
                     <c:when test="${result==2}">
-                        <td class="login"><a href="custom.do" style="text-decoration: none"></a></td>
+                        <td class="login"><a href="custom.do" style="text-decoration: none">사원 등록</a></td>
                     </c:when>
                     <c:when test="${result==3}">
                         <td style="width:300px">사원 등록

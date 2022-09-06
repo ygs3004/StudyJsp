@@ -28,4 +28,9 @@
         </form-login-config>
     </login-config>
 
+    <error-page>
+        <error-code>404</error-code>
+        <location>/exceptionNoPage.jsp</location>
+    </error-page>
+
 </web-app>

@@ -6,7 +6,10 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class EmployeesDAO {
 
@@ -53,7 +56,7 @@ public class EmployeesDAO {
             if (rs.next()) {
                 if (pwd.equals(rs.getString("pass"))) {
                     if (lev.equals(rs.getString("lev"))) {
-                        result = 2; // 관리자로 로그인 실패
+                        result = 2; // 관리자로 로그인
                         if (lev.equals("B")) {
                             result = 3;// 일반 회원으로 로그인
                         }
