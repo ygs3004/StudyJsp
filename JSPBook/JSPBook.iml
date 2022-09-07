@@ -26,5 +26,6 @@
     <orderEntry type="library" exported="" name="cos" level="project" />
     <orderEntry type="library" exported="" name="commons-io-2.11.0" level="project" />
     <orderEntry type="library" exported="" name="commons-fileupload-1.4" level="project" />
+    <orderEntry type="library" name="javax.servlet.api1" level="project" />
   </component>
 </module>

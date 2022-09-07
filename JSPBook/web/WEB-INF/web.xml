@@ -26,21 +26,42 @@
         </form-login-config>
     </login-config>
 
+    <filter>
 <!--
-    <error-page> ex / ch11 / exception
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/Exercise/ch11/exception_error.jsp</location>
-    </error-page>
+        <filter-name>Filter01</filter-name>
+        <filter-class>ch12.com.filter.AuthenFilter</filter-class>
 
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/ch11/exceptionType_error.jsp</location>
-    </error-page>
-
-    <error-page>
-        <error-code>500</error-code>
-        <location>/ch11/errorCode_error.jsp</location>
-    </error-page>
+        <filter-name>Filter02</filter-name>
+        <filter-class>ch12.com.filter.InitParamFilter</filter-class>
+        <init-param>
+            <param-name>param1</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>param2</param-name>
+            <param-value>1234</param-value>
+        </init-param>
 -->
+
+        <filter-name>Filter02_2</filter-name>
+        <filter-class>ch12.com.filter.LogFileFilter</filter-class>
+        <init-param>
+            <param-name>filename</param-name>
+            <param-value>c:\\logs\\monitor.log</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Filter02_2</filter-name>
+        <url-pattern>/ch12/filter02_process.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LoginCheckFilter</filter-name>
+        <filter-class>ch12.com.filter.LoginCheckFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginCheckFilter</filter-name>
+        <url-pattern>/Exercise/ch12/login_success.jsp</url-pattern>
+    </filter-mapping>
 
 </web-app>

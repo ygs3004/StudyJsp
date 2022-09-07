@@ -99,7 +99,8 @@ public class MovieDAO {
             pstmt.setInt(1, code);
             rs = pstmt.executeQuery();
 
-            while(rs.next()){
+            if(rs.next()){
+                mvo = new MovieVO();
                 mvo.setCode(rs.getInt("code"));
                 mvo.setTitle(rs.getString("title"));
                 mvo.setPrice(rs.getInt("price"));
@@ -116,6 +117,50 @@ public class MovieDAO {
         }
 
         return mvo;
+    }
+
+    public void deleteMovie(int code){
+
+        String sql="DELETE FROM movie WHERE code = ?";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            conn = util.DBManager.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, code);
+            pstmt.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally {
+            util.DBManager.close(pstmt, conn);
+        }
+
+    }
+
+    public void updatProduct(MovieVO mvo){
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String sql = "UPDATE movie SET title=?, price=?, director=?, actor=?, poster=?, synopsis=? WHERE code=?";
+
+        try{
+            conn = DBManager.getConnection();
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setString(1, mvo.getTitle());
+            pstmt.setInt(2, mvo.getPrice());
+            pstmt.setString(3, mvo.getDirector());
+            pstmt.setString(4, mvo.getActor());
+            pstmt.setString(5, mvo.getPoster());
+            pstmt.setString(6, mvo.getSynopsis());
+            pstmt.setInt(7, mvo.getCode());
+            pstmt.executeUpdate();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            util.DBManager.close(pstmt, conn);
+        }
     }
 
 }
