@@ -2,7 +2,7 @@ package dto;
 
 public class Book {
 
-	private String bookdId;		//도서 아이디
+	private String bookId;		//도서 아이디
 	private String name;		//도서명
 	private Integer unitPrice;	//가격
 	private String author;		//저자
@@ -14,23 +14,23 @@ public class Book {
 	private String releaseDate;	//출판일(월/년)
 	private String condition;	//신규 도서 or 중고 도서 or E-Book
 	private String fileName; // 이미지 파일 이름
-
+	private int quantity; // 장바구니 담은 개수
 	public Book() {
 
 	}
 
-	public Book(String bookdId, String name, Integer unitPrice) {
-		this.bookdId = bookdId;
+	public Book(String bookId, String name, Integer unitPrice) {
+		this.bookId = bookId;
 		this.name = name;
 		this.unitPrice = unitPrice;
 	}
 
-	public String getBookdId() {
-		return bookdId;
+	public String getBookId() {
+		return bookId;
 	}
 
-	public void setBookdId(String bookdId) {
-		this.bookdId = bookdId;
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
 	}
 
 	public String getName() {
@@ -116,4 +116,12 @@ public class Book {
 	public String getFileName() {return fileName;}
 
 	public void setFileName(String fileName) {this.fileName = fileName;}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 }

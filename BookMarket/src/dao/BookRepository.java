@@ -59,7 +59,7 @@ public class BookRepository {
 		Book book = null;
 
 		for(int i=0; i< listOfBook.size(); i++){
-			if(listOfBook.get(i).getBookdId().equals(id)){
+			if(listOfBook.get(i).getBookId().equals(id)){
 				book = listOfBook.get(i);
 			}
 		}

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -32,9 +33,11 @@ public class MovieList extends HttpServlet {
         // TODO Auto-generated method stub
         // response.getWriter().append("Served at: ").append(request.getContextPath());
         String url = "movie/movieList.jsp";
-
-        ArrayList<MovieVO> mlist = MovieDAO.getInstance().selectAllMovie();
-        request.setAttribute("mlist", mlist);
+        MovieDAO dao = MovieDAO.getInstance();
+        ArrayList<MovieVO> mlist = dao.selectAllMovie();
+//        request.setAttribute("mlist", mlist);
+        HttpSession session = request.getSession();
+        session.setAttribute("mlist",mlist);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
@@ -46,7 +49,7 @@ public class MovieList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // TODO Auto-generated method stub
-        // doGet(request, response);
+         doGet(request, response);
     }
 
 }

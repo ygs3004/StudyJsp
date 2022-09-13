@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aca5a9d2-b089-4927-aa15-f90fcc0c7759" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookMarket/src/dao/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookMarket/src/dao/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookMarket/src/dto/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BookMarket/src/dto/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookMarket/web/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BookMarket/web/book.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookMarket/web/books.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BookMarket/web/books.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookMarket/web/processAddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../BookMarket/web/processAddBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebMarket/src/dto/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebMarket/src/dto/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebMarket/web/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebMarket/web/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebMarket/web/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebMarket/web/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebMarket/web/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../WebMarket/web/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/WEB-INF/classes/dao/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/WEB-INF/classes/dao/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/WEB-INF/classes/dto/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/WEB-INF/classes/dto/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/book.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/books.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/books.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/processAddBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/BookMarket_war_exploded/processAddBook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/WEB-INF/classes/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/WEB-INF/classes/dto/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/WebMarket_war_exploded/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieWrite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/controller/MovieWrite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/dao/MovieDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/WEB-INF/classes/com/seoil/dao/MovieDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieWrite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/movie/movieWrite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/script/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/../out/artifacts/web_study_11_war_exploded/script/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/BookMarket/dao/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/BookMarket/dao/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/BookMarket/dto/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/BookMarket/dto/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/WebMarket/dto/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/WebMarket/dto/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieUpdate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieUpdate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieWrite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/controller/MovieWrite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/dao/MovieDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/web_study_11/com/seoil/dao/MovieDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/seoil/controller/MovieDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/seoil/controller/MovieDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/seoil/controller/MovieList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/seoil/controller/MovieList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/seoil/controller/MovieUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/seoil/controller/MovieUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/seoil/controller/MovieWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/seoil/controller/MovieWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/seoil/dao/MovieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/seoil/dao/MovieDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/movie/movieList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/movie/movieList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/movie/movieUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/movie/movieUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/movie/movieWrite.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/movie/movieWrite.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_study_11.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EgyJgUHoVsmYBg8FlwSUzUNMWG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Java Emp Class Lecture 2022-06-15/inteliJ/JSP",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aca5a9d2-b089-4927-aa15-f90fcc0c7759" name="Changes" comment="" />
+      <created>1663031451925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663031451925</updated>
+      <workItem from="1663031454234" duration="130000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

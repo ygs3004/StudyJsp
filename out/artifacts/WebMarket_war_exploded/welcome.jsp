@@ -28,7 +28,7 @@
 
 <div class="container">
 	<div class="text-center">
-		<h3><%=tagline%></h3>
+		<h3><a href="products.jsp"><%=tagline%></a></h3>
 		<%
 			response.setIntHeader("Refresh",5);
 			Calendar day = Calendar.getInstance();

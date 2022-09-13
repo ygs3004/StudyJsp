@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>영화 등록</title>
-    <link rel="stylesheet" type="text/css" href="../css/shopping.css">
-    <script type="text/javascript" src="../script/product.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/script/product.js"></script>
 </head>
 <body>
 <div id="wrap" align="center">
 <h1>정보 등록</h1>
-<form action="movieWrite.do" method="post" enctype="multipart/form-data" name="frm">
+<form action="${pageContext.request.contextPath}/movieWrite.do" method="post" enctype="multipart/form-data" name="frm">
     <table>
         <tr>
             <th>제목</th>
@@ -37,9 +37,9 @@
             <td><textarea cols="70" rows="10" name="synopsis"></textarea></td>
         </tr>
     </table><br>
-    <input type="submit" value="확인" onclick="return productCheck()">
+    <input type="submit" value="확인" onclick="return productCheck();">
     <input type="reset" value="취소">
-    <input type="button" value="목록" onclick="location.href='movielist.do'">
+    <input type="button" value="목록" onclick="location.href='${pageContext.request.contextPath}/movielist.do'">
 
 </form>
 </div>

@@ -58,6 +58,24 @@ public class MovieUpdate extends HttpServlet {
         String encType = "UTF-8";
         DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
         MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxPostSize, encType, policy);
-    }
 
+        MovieVO mvo = new MovieVO();
+        mvo.setCode(Integer.parseInt(multi.getParameter("code")));
+        mvo.setTitle(multi.getParameter("title"));
+        mvo.setPrice(Integer.parseInt(multi.getParameter("price")));
+        mvo.setDirector(multi.getParameter("director"));
+        mvo.setActor(multi.getParameter("actor"));
+        mvo.setSynopsis(multi.getParameter("synopsis"));
+
+        if(multi.getFilesystemName("poster")==null){
+            mvo.setPoster(multi.getParameter("nonmakeImg"));
+        }else{
+            mvo.setPoster(multi.getFilesystemName("poster"));
+        }
+
+        MovieDAO productDAO = MovieDAO.getInstance();
+        productDAO.updateProduct(mvo);
+
+        response.sendRedirect("movielist.do");
+    }
 }

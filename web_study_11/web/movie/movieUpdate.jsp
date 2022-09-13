@@ -8,13 +8,12 @@
 <head>
     <meta charset="UTF-8">
     <title>영화 수정</title>
-    <link rel="stylesheet" type="text/css" href="../css/shopping.css">
-    <script type="text/javascript" src="../script/product.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/shopping.css">    <script type="text/javascript" src="../script/product.js"></script>
 </head>
 <body>
 <div id="wrap" align="center">
     <h1>정보 수정</h1>
-    <form action="movieupdate.do" method="post" enctype="multipart/form-data" name="frm">
+    <form action="${pageContext.request.contextPath}/movieupdate.do" method="post" enctype="multipart/form-data" name="frm">
         <input type="hidden" name="code" value="${movie.code}">
         <input type="hidden" name="nonmakeImg" value="${movie.poster}">
         <table>
@@ -59,7 +58,7 @@
                 </td>
             </tr>
         </table><br>
-        <input type="submit" value="수정">&nbsp;<input type="button" value="목록" onclick="location.href='movieupdate.do'">
+        <input type="submit" value="수정">&nbsp;<input type="button" value="목록" onclick="location.href='${pageContext.request.contextPath}/movielist.do'">
     </form>
 </div>
 </body>

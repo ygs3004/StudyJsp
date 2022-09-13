@@ -54,7 +54,7 @@
 
 		<div class="col-2" >
 			<br><br>
-			<a href="book.jsp?id=<%=book.getBookdId()%>"
+			<a href="book.jsp?id=<%=book.getBookId()%>"
 			   class="btn btn-secondary" role="button">상세 정보 &raquo;</a>
 		</div>
 

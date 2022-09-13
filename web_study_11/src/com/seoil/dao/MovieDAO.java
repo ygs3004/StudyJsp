@@ -46,6 +46,8 @@ public class MovieDAO {
                 mvo.setActor(rs.getString("actor"));
                 mvo.setPoster(rs.getString("poster"));
                 mvo.setSynopsis(rs.getString("synopsis"));
+
+                productList.add(mvo);
             }
 
         } catch (Exception e) {
@@ -138,7 +140,7 @@ public class MovieDAO {
 
     }
 
-    public void updatProduct(MovieVO mvo){
+    public void updateProduct(MovieVO mvo){
 
         Connection conn = null;
         PreparedStatement pstmt = null;

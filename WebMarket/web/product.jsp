@@ -9,6 +9,15 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">	<meta charset="UTF-8">
     <meta charset="UTF-8">
     <title>상품 상세 정보</title>
+    <script type="text/javascript">
+        function addToCart(){
+            if (confirm("상품을 장바구니에 추가하시겠습니까?")){
+                document.addForm.submit();
+            }else{
+                document.addForm.reset();
+            }
+        }
+    </script>
 </head>
 <body>
     <jsp:include page="menu.jsp"/>
@@ -37,13 +46,14 @@
                 <p><b>분류</b> : <%=product.getCategory()%>
                 <p><b>재고 수</b> : <%=product.getUnitsInStock()%>
                 <h4><%=product.getUnitPrice()%>원</h4>
-                <p><a href="#" class="btn btn-info">상품 주문 &raquo;</a>
+                <p><form name="addForm" action="./addCart.jsp?id=<%=product.getProductId()%>" method="post">
+                <p><a href="#" class="btn btn-info" onclick="addToCart()">상품 주문</a>
+                <a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
                 <a href="./products.jsp" class="btn btn-primary">상품목록 &raquo;</a>
+                </form>
             </div>
         </div>
     </div>
-
-
 
 
     <jsp:include page="footer.jsp"/>

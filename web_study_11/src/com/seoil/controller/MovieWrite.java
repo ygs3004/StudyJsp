@@ -31,7 +31,7 @@ public class MovieWrite extends HttpServlet {
             throws ServletException, IOException {
         // TODO Auto-generated method stub
         // response.getWriter().append("Served at: ").append(request.getContextPath());
-
+        
         String url="movie/movieWrite.jsp";
         request.getRequestDispatcher(url).forward(request, response);
     }
@@ -55,10 +55,16 @@ public class MovieWrite extends HttpServlet {
         mvo.setPrice(Integer.parseInt(multi.getParameter("price")));
         mvo.setDirector(multi.getParameter("director"));
         mvo.setActor(multi.getParameter("actor"));
-        mvo.setPoster(multi.getParameter("poster"));
         mvo.setSynopsis(multi.getParameter("synopsis"));
-        System.out.println(mvo);
 
+
+        if(multi.getFilesystemName("poster")==null){
+            mvo.setPoster(multi.getParameter("nonmakeImg"));
+        }else{
+            mvo.setPoster(multi.getFilesystemName("poster"));
+        }
+
+        System.out.println(mvo);
         MovieDAO productDAO = MovieDAO.getInstance();
         productDAO.insertMovie(mvo);
 

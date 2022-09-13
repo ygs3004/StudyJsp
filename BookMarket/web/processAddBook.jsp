@@ -56,7 +56,7 @@
     BookRepository dao = BookRepository.getInstance();
 
     Book newBook = new Book();
-    newBook.setBookdId(bookId);
+    newBook.setBookId(bookId);
     newBook.setName(name);
     newBook.setUnitPrice(price);
     newBook.setAuthor(author);
