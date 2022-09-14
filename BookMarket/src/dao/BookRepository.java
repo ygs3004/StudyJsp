@@ -22,7 +22,7 @@ public class BookRepository {
 		helloCoding.setFileName("HelloCoding.png");
 
 
-		Book itMobile1 = new Book("IT모바일", "쉽게 배우는 자바 프로그래밍", 27000);
+		Book itMobile1 = new Book("IT 모바일", "쉽게 배우는 자바 프로그래밍", 27000);
 		itMobile1.setAuthor("우종중");
 		itMobile1.setDescription("객체 지향의 핵심과 자바의 현대적 기능을 충실히 다루면서도 초보자가 쉽게 학습할 수 있게 구성했습니다. 시각화 도구를 활용한 개념 설명과 군더더기 없는 핵심 코드를 통해 개념과 구현...");
 		itMobile1.setPublisher("한빛미디어");

@@ -21,7 +21,7 @@
 <div class="jumbotron">
 	<div class="container">
 		<h1 class ="dispaly-3">
-			<%=greeting%>
+			<a href="books.jsp"><%=greeting%></a>
 		</h1>
 	</div>
 </div>

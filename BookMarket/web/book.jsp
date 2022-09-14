@@ -31,6 +31,7 @@
     </div>
 </div>
 <%
+    request.setCharacterEncoding("UTF-8");
     String id = request.getParameter("id");
     BookRepository dao = BookRepository.getInstance();
     Book book = dao.getBookByID(id);
@@ -52,7 +53,7 @@
             <p><b>출판일</b> : <%=book.getReleaseDate()%>
             </p>
             <h4><%=book.getUnitPrice()%>원</h4>
-            <p><form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">
+            <p><form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>">
                 <a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
                 <a href="#" class="btn btn-info" onclick="addToCart()">도서 주문 &raquo;</a>
                 <a href="./books.jsp" class="btn btn-primary">도서목록 &raquo;</a>

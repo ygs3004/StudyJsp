@@ -33,7 +33,7 @@
             <table width="100%">
                 <tr>
                     <td align="right"><a href="./deleteCart.jsp?cartId=<%=cartId%>" class="btn btn-danger">삭제하기</a>
-                    <a href="#" class="btn btn-success">주문하기</a></td>
+                    <a href="./shippingInfo.jsp?cartId=<%=cartId%>" class="btn btn-success">주문하기</a></td>
                 </tr>
             </table>
         </div>

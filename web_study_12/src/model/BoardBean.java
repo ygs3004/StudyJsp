@@ -7,9 +7,9 @@ public class BoardBean {
     private String subject;
     private String password;
     private String reg_date;
-    private int ref;
-    private int re_step;
-    private int re_level;
+    private int ref; // 한개의 글 (그룹으로 댓글과 같은 ref값으로 그룹화)
+    private int re_step; // 댓글1, 대댓글2, 대댓댓글3 ---- 댓글레벨
+    private int re_level; // 숫자가 클수록 최신, 화면상 위에 보여짐
     private int readcount;
     private String content;
 
