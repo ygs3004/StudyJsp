@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
@@ -26,21 +27,35 @@
 	%>
 	<div class="container">
 		<div class="row" align="center">
-		<%
-			for(int i=0; i<listOfProducts.size(); i++){
-				Product product = listOfProducts.get(i);
-		%>
-		<div class="col-md-4">
-			<img src="${pageContext.request.contextPath}/resources/images/upload/<%=product.getFilename()%>" style="width: 100%"> <%--제품 사진--%>
-			<h3><%=product.getPname() %></h3>
-			<p><%=product.getDescription() %>
-			<p><%=product.getUnitPrice() %>원
-			<p><a href="product.jsp?id=<%=product.getProductId()%>"
-				  class="btn btn-secondary" role="button">상세 정보 &raquo;</a>
-		</div>
-		<%
-			}		
-		%>
+			<%@ include file="dbconn.jsp"%>
+			<%
+				PreparedStatement pstmt = null;
+				ResultSet rs = null;
+				String sql = "SELECT * FROM product";
+				pstmt = conn.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+
+				while(rs.next()){
+			%>
+			<div class="col-md-4">
+				<img src="${pageContext.request.contextPath}/resources/images/upload/<%=rs.getString("p_filename")%>" style="width: 100%"> <%--제품 사진--%>
+				<h3><%=rs.getString("p_name") %></h3>
+				<p><%=rs.getString("p_description")%>
+				<p><%=rs.getString("p_unitPrice")%>원
+				<p><a href="product.jsp?id=<%=rs.getString("p_id")%>"
+					  class="btn btn-secondary" role="button">상세 정보 &raquo;</a>
+			</div>
+			<%
+				}
+//				for(int i=0; i<listOfProducts.size(); i++){
+//					Product product = listOfProducts.get(i);
+				if(rs!=null)
+					rs.close();
+				if(pstmt!=null)
+					pstmt.close();
+				if(conn!=null)
+					conn.close();
+			%>
 		</div>
 		<hr>
 	</div>

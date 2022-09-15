@@ -1,8 +1,8 @@
 CREATE TABLE book(
-        b_id VARCHAR2(10) NOT NULL,
-        b_name VARCHAR2(20),
+        b_id VARCHAR2(20) NOT NULL,
+        b_name VARCHAR2(60),
         b_unitPrice NUMBER(10),
-        b_author VARCHAR2(50),
+        b_author VARCHAR2(100),
         b_publisher VARCHAR2(20),
         b_description VARCHAR2(1000),
         b_category VARCHAR2(20),
@@ -15,3 +15,5 @@ CREATE TABLE book(
 );
 
 SELECT * FROM book;
+
+DROP TABLE book;

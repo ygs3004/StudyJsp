@@ -115,7 +115,7 @@ public class BoardDAO {
         getCon();
 
         try{
-            String readsql = "UPDATE board SET readcount=readcount+1 WHER num=?";
+            String readsql = "UPDATE board SET readcount=readcount+1 WHERE num=?";
             pstmt = conn.prepareStatement(readsql);
             pstmt.setInt(1, num);
             pstmt.executeUpdate();

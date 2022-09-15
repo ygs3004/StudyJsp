@@ -5,6 +5,9 @@
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="java.util.Enumeration" %>
+<%@ page import="java.sql.*"%>
+<%@ include file="dbconn.jsp"%>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -52,7 +55,33 @@
     Enumeration files = multi.getFileNames();
     String fname = (String) files.nextElement();
     String fileName = multi.getFilesystemName(fname);
+    PreparedStatement pstmt = null;
 
+    String sql = "INSERT INTO book VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+    pstmt = conn.prepareStatement(sql);
+    pstmt.setString(1, bookId);
+    pstmt.setString(2, name);
+    pstmt.setInt(3, price);
+    pstmt.setString(4, author);
+    pstmt.setString(5, publisher);
+    pstmt.setString(6, description);
+    pstmt.setLong(7, category);
+    pstmt.setInt(8, stock);
+    pstmt.setString(9, totalPages);
+    pstmt.setString(10, releaseData);
+    pstmt.setString(11, condition);
+    pstmt.setString(12, fileName);
+
+    pstmt.executeUpdate();
+
+    if(pstmt != null)
+        pstmt.close();
+    if(conn != null)
+        conn.close();
+
+
+    response.sendRedirect("books.jsp");
+    /*
     BookRepository dao = BookRepository.getInstance();
 
     Book newBook = new Book();
@@ -70,8 +99,8 @@
     newBook.setFileName(fileName);
 
     dao.addBook(newBook);
+*/
 
-    response.sendRedirect("books.jsp");
 %>
 
 </body>
