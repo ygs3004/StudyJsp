@@ -15,8 +15,8 @@
         BoardBean bean = dao.getOneBoard(num);
     %>
 
-    <div align="center">
-        <h2>게시글 보기</h2>
+    <br><br><div align="center" class="container">
+    <h2>게시글 보기</h2>
         <table width="600" border="1" bgcolor="skyblue">
             <tr height="40">
                 <td width="100" align="center">글번호</td>

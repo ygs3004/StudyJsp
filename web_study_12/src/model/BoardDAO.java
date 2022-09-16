@@ -77,7 +77,7 @@ public class BoardDAO {
         getCon();
 
         try{
-            String sql = "SELECT * FROM(SELECT A.*,ROWNUM Rnum FROM (SELECT*FROM board ORDER BY ref DESC, re_step ASC) A)"
+            String sql = "SELECT * FROM(SELECT A.*,ROWNUM Rnum FROM (SELECT*FROM board ORDER BY ref DESC, re_level DESC) A)"
                     +"WHERE Rnum>=? and Rnum<=?";
 
             pstmt = conn.prepareStatement(sql);
@@ -151,11 +151,10 @@ public class BoardDAO {
         int ref = bean.getRef();
         int re_step = bean.getRe_step();
         int re_level = bean.getRe_level();
-
         getCon();
 
         try{
-            String levelsql = "UPDATE board SET re_level = re_revel+1 WHERE ref=? and re_level > ?";
+            String levelsql = "UPDATE board SET re_level = re_level+1 WHERE ref=? and re_level>= ?";
             //re_step 필요 없나? 체크
             pstmt = conn.prepareStatement(levelsql);
             pstmt.setInt(1, ref);
@@ -163,13 +162,15 @@ public class BoardDAO {
             pstmt.executeUpdate();
 
             String sql="INSERT INTO board VALUES(board_seq.nextval, ?, ?, ?, ?, SYSDATE, ?, ?, ?, 0, ?)";
+            pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, bean.getWriter());
             pstmt.setString(2, bean.getEmail());
             pstmt.setString(3, bean.getSubject());
             pstmt.setString(4, bean.getPassword());
             pstmt.setInt(5, ref);
             pstmt.setInt(6, re_step+1);
-            pstmt.setString(9, bean.getContent());
+            pstmt.setInt(7, re_level);
+            pstmt.setString(8, bean.getContent());
 
             pstmt.executeUpdate();
             conn.close();

@@ -23,6 +23,9 @@
         </tr>
         <c:forEach var="row" items="${resultSet.rowsByIndex}">
             <tr>
+                <c:if test="${row==null}">
+                    <c:out  value="row is null"/>
+                </c:if>
                 <c:forEach var="column" items="${row}" varStatus="i">
                     <td>
                         <c:if test="${column != null}">

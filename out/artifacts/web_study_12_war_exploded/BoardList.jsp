@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>BoardList.jsp</title>
+
 </head>
 <body>
     <div align="center">

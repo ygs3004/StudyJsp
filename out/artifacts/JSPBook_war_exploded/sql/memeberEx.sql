@@ -6,5 +6,5 @@ CREATE TABLE memberEX(
 
 INSERT INTO memberEX VALUES('1', '1234', '홍길순');
 INSERT INTO memberEX VALUES('2', '1235', '홍길동');
-
+COMMIT;
 SELECT * FROM memberEX;

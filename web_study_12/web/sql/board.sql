@@ -17,5 +17,8 @@ CREATE TABLE board(
 
 CREATE SEQUENCE board_seq;
 COMMIT;
-
+DELETE FROM board;
 SELECT * FROM board;
+
+SELECT * FROM(SELECT A.*,ROWNUM Rnum FROM (SELECT*FROM board ORDER BY ref DESC, re_level DESC) A);
+"WHERE Rnum>=? and Rnum<=?;
